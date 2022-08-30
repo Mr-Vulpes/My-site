@@ -1,0 +1,61 @@
+$main-black: #000000;
+$main-blue: #48C9CD;
+$main-red: #C3250C;
+$main-yellow: #F0D600;
+
+body {
+    font-family: 'Alfa Slab One', cursive;
+    color: whte;
+}
+
+.cover {
+    margin: 0;
+    width: 100%;
+    height: 100vh;  
+    color: #fff;
+    background: linear-gradient(-45deg, $main-blue, $main-red, $main-yellow, $main-blue, $main-red, $main-yellow, $main-blue, $main-red, $main-yellow, $main-blue, $main-red, $main-yellow);
+    background-size: 200% 200%;
+    animation: gradientBG 5s linear infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+       background-position: 0% 50%;
+    }
+    
+    100% {
+        background-position: 81.5% 50%;
+    }
+}
+
+.cover__greetings {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    top: -25%;
+    animation: helloFalling 1s linear;
+    z-index: 1;
+}
+
+.cover__greetings--box {
+    transform: translate(50% 50%);
+}
+
+.cover__greetings--H, .cover__greetings--E, .cover__greetings--L1, .cover__greetings--L2, .cover__greetings--O {
+    font-size: 4rem;
+    padding: 0 5px;
+}
+
+.crack {
+    transform: translateX(-50%) rotate(20deg);
+    height: 50%;
+    position: relative;
+    top: 35%;
+    left: 50%;
+    opacity: 0;
+}
+
+.cover__greetings--H {
+    transform: rotate(0deg);
+}
